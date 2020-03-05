@@ -1,38 +1,271 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: montserrat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 100px;
+  width: 100%;
+  color: white;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: fixed;
+}
+
+.logo {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  color: gold;
+  font-weight: bolder;
+  font-size: 22px;
+  padding: 0 40px;
+  float: left;
+  /* line-height: 80px; */
+}
+
+ul{
+  float: right;
+  padding-right: 30px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+li{
+  display: inline-block;
+  margin: 0 15px;
+  font-weight: 550;
+}
+
+.active:hover{
+  color: gold;
+}
+
+img {
+  width: 100%;
+  /* max-height: 90vh; */
+}
+
+/* .nav-bar{
+  height: 90px;
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.check-btn{
+  font-size: 50px;
+  float: right;
+  padding-right: 40px;
+  display: none;
+}
+
+.dropdown-toggle{
+  display: none;
+  background-color: gold;
+  padding: 7px;
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+.mobile-links {
+  display: none;
+}
+
+.image-words{
+  width: 100%;
+  min-height: 750px;
+  color: white;
+  background-image: url('https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
+}
+
+.welcome{
+  font-family: 'Courgette';
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.its-nice{
+  font-size: 75px;
+  font-weight: 700;
+  padding: 20px;
+  margin-left: 15px;
+}
+
+.tell-me-more{
+  background-color: gold;
+  padding: 20px;
+  font-weight: 800;
+  font-size: 20px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+
+}
+
+.services-section{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 40px;
+  flex-direction: column;
+}
+.services{
+  font-size: 35px;
+  font-weight: 700;
+
 }
 
-.App-link {
-  color: #61dafb;
+.under-service{
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.service-area{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.individual-service{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services-img{
+  height: 150px;
+  width: 150px;
+}
+
+.individual-service-title{
+  font-size: 22px;
+  font-weight: 700;
+  margin: 15px;
+}
+
+@media(max-width: 1000px){
+  header{
+    background-color: #212121;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 70px ;
+    
   }
-  to {
-    transform: rotate(360deg);
+  /* .logo{
+    height: 175px;
+  } */
+  .header-links{
+    display: none;
   }
+  .dropdown-toggle{
+    display: initial;
+  }
+  .mobile-links{
+    background-color: #212121;
+    display: initial;
+    position: fixed;
+    height: 200px;
+    width: 100%;
+    top: 60px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-left: 55px;
+  }
+  .image-words{
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 200px;
+  }
+  .under-service{
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.service-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 120px;
+
+}
+} 
+
+@media(max-width: 500px){
+  .header-links{
+    display: none;
+  }
+  .dropdown-toggle{
+    display: initial;
+  }
+  .mobile-links{
+    display: initial;
+    height: 150px;
+    width: 150px;
+    background-color: royalblue;
+    position: fixed;
+    top: 200px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-words{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .welcome{
+  font-family: 'Courgette';
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 600;
+}
+  .its-nice{
+  font-size: 40px;
+  font-weight: 700;
+}
+.under-service{
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.service-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 60px;
+
+}
 }
